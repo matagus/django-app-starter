@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artists</title>
+</head>
+<body>
+  <h1>Artists</h1>
+  <ul>
+    {% for artist in artists %}
+      <li>
+        <a href="#">{{ artist.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>

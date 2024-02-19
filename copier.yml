@@ -1,3 +1,5 @@
+_subdirectory: src
+
 # questions
 project_name:
     type: str

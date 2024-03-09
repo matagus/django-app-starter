@@ -59,7 +59,7 @@ include = [
 
 [tool.hatch.envs.default]
 dependencies = [
-    "Django>=4.0", "ipython", "ipdb", "mypy", "typing-extensions"
+    "Django>=4.0", "ipython", "ipdb", "mypy", "typing-extensions", "django-extensions", "Werkzeug"
 ]
 
 [tool.hatch.envs.project]
@@ -68,10 +68,10 @@ dependencies = [
 ]
 
 [tool.hatch.envs.project.scripts]
-server = "python example_project/manage.py runserver_plus"
-shell = "python example_project/manage.py shell_plus"
-migrate = "python example_project/manage.py migrate"
-makemigrations = "python example_project/manage.py makemigrations"
+server = "python example_project/manage.py runserver_plus {args}"
+shell = "python example_project/manage.py shell_plus {args}"
+migrate = "python example_project/manage.py migrate {args}"
+makemigrations = "python example_project/manage.py makemigrations {args}"
 
 # Test environment
 [[tool.hatch.envs.test.matrix]]
@@ -94,8 +94,8 @@ python = ["3.10", "3.11", "3.12"]
 dependencies = ["coverage[toml]", "django~={matrix:django}.0"]
 
 [tool.hatch.envs.test.scripts]
-test = "python -m django test --settings tests.settings"
-test-cov = "coverage run -m django test --settings tests.settings"
+test = "python -m django test --settings tests.settings {args}"
+test-cov = "coverage run -m django test --settings tests.settings {args}"
 cov-report = ["coverage json", "coverage report"]
 cov = ["test-cov", "cov-report"]
 

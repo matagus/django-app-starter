@@ -2,28 +2,44 @@
 
 ![Python Compatibility](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg) [![License](https://img.shields.io/badge/MIT-blue.svg)](https://opensource.org/licenses/MIT) [![We use Hatch](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-A copier template for generating a Django app.
+Generate a new Django app with all the goodies you need to start developing, testing and publishing your app.
 
 
 ## Features
 
-The resulting Django app will:
+- [x] Compatibility with Python 3.9 to 3.12 and Django 4 to 5.0.3.
+- [x] Package management and dynamic versioning using [Hatch](https://hatch.pypa.io/latest/install/).
+- [x] Testing with `hatch` for all possible combinations of Python and Django versions.
+- [x] Code coverage reporting to using [Coverage.py](https://coverage.readthedocs.io/en/latest/).
+- [x] Ready to use [GitHub Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions)
+pipelines for:
+  * [x] CI + reporting code coverage to codecov.io
+  * [x] Building and publishing to Pypi when a new tag is pushed
+  * [x] Creating a draft release
+- [x] `pre-commit` configuration with:
+  - [x] `black` for code formatting
+  - [x] Linting and formatting with [`ruff`](https://github.com/charliermarsh/ruff)
+  - [x] `codespell`, `pyupgrade` and several standard checks.
+- [x] Consistent coding styles for multiple editors and IDEs via [.editorconfig](https://editorconfig.org/) file.
+- [x] Configuration using `pyproject.toml` file.
+- [x] `README.md` file with instructions on how to start developing, testing and publishing your app.
+- [x] An `example_project` fully configured to try you app from the start.
+- [x] Dependency updates with [Dependabot](https://github.com/dependabot).
+- [x] Issues templates for bugs and features, a Code of conduct file referencing Django's CoC, and a Security Policy
+config.
+- [x] Sync updates from newest versions of this template with [Copier](https://copier.readthedocs.io/en/stable/updating/).
 
-- Be compatible with Python 3.9 to 3.12 and Django 4 to 5.0.2.
-- A `pyproject.toml` with all the metadata for your app.
-- Have a `tests` folder where you can place your app's tests, with coverage report and an `example_project` fully
-  configured to try you app.
-- Use `hatch` for managing virtual environments, testing your library ion every possible & valid combination of
-  Python and Django, and provide you with some util commands.
-- Use dynamic version management via `hatch`.
-- Provide `pre-commit` configuration with `black`, `ruff`, `codespell`, `pyupgrade` and several standard checks.
-- Provide a  `.editorconfig`.
-- Have a quite complete README file.
-- Setup up for using Github Actions for testing your app in the test matrix mentioned above (CI) reporting code
-  coverage to codecov.io, building and publishing to Pypi and creating a draft release for your repo.
-- Have other goodies for your Github repo like: security policy, issues templates for bugs and features, a Code of
-  conduct file referencing Django's CoC, and Dependabot configuration.
-- `LICENSE` and `AUTHORS.md` files you should customize to your needs.
+
+## Coming Soon
+
+- [ ] Documentation with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and docstring reference
+support with [mkdocstrings](https://mkdocstrings.github.io/).
+- [ ] Latest stable documentation published to [GitHub](https://docs.github.com/en/pages)/[GitLab](https://docs.gitlab.com/ee/user/project/pages/) Pages.
+- [ ] [Versioned documentation](https://docs.readthedocs.io/en/stable/versions.html) and [pull request previews](https://docs.readthedocs.io/en/stable/pull-requests.html) with [Read the Docs](https://readthedocs.org/).
+- [ ] Containerization for development and deployment with [dev container](https://containers.dev/).
+- [ ] Follow the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
+- [ ] Standardised list of GitHub labels synchronised on push to master using [the labels CLI](https://github.com/hackebrot/labels).
+- [ ] Github Actions Cached workflows
 
 
 ## Usage

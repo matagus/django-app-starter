@@ -28,3 +28,5 @@ celerybeat.pid
 dmypy.json
 # Django
 *.log
+# Environment variables
+.env

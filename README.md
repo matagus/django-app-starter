@@ -28,6 +28,7 @@ pipelines for:
 - [x] Issues templates for bugs and features, a Code of conduct file referencing Django's CoC, and a Security Policy
 config.
 - [x] Sync updates from newest versions of this template with [Copier](https://copier.readthedocs.io/en/stable/updating/).
+- [x] Standardised list of GitHub labels synchronised on push to main branch using [the labels CLI](https://github.com/hackebrot/labels).
 
 
 ## Coming Soon
@@ -38,7 +39,6 @@ support with [mkdocstrings](https://mkdocstrings.github.io/).
 - [ ] [Versioned documentation](https://docs.readthedocs.io/en/stable/versions.html) and [pull request previews](https://docs.readthedocs.io/en/stable/pull-requests.html) with [Read the Docs](https://readthedocs.org/).
 - [ ] Containerization for development and deployment with [dev container](https://containers.dev/).
 - [ ] Follow the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
-- [ ] Standardised list of GitHub labels synchronised on push to master using [the labels CLI](https://github.com/hackebrot/labels).
 - [ ] Github Actions Cached workflows
 
 

@@ -68,10 +68,11 @@ dependencies = [
 ]
 
 [tool.hatch.envs.project.scripts]
-server = "python example_project/manage.py runserver_plus {args}"
+runserver = "python example_project/manage.py runserver_plus {args}"
 shell = "python example_project/manage.py shell_plus {args}"
 migrate = "python example_project/manage.py migrate {args}"
 makemigrations = "python example_project/manage.py makemigrations {args}"
+createsuperuser = "python example_project/manage.py createsuperuser {args}"
 
 # Test environment
 [[tool.hatch.envs.test.matrix]]

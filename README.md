@@ -70,8 +70,8 @@ app ready to go.
 ```
 cd <app-name>
 hatch run project:migrate
-hatch run project:createuser
-hatch run project:server
+hatch run project:createsuperuser
+hatch run project:runserver
 ```
 
 Also, you can run the tests (for all the Python + Django valid combinations) with:

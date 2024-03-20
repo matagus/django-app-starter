@@ -3,7 +3,7 @@ _subdirectory: src
 # questions
 project_name:
     type: str
-    help: What is your project name?
+    help: What is your Django App name?
 
 module_name:
     type: str
@@ -11,7 +11,7 @@ module_name:
 
 project_description:
   type: str
-  help: Your project description
+  help: Please describe what your app does in a few words
 
 secret_key:
   type: str

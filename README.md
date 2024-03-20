@@ -2,7 +2,8 @@
 
 ![Python Compatibility](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg) [![License](https://img.shields.io/badge/MIT-blue.svg)](https://opensource.org/licenses/MIT) [![We use Hatch](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-Generate a new Django app with all the goodies you need to start developing, testing and publishing your app.
+Generate a new Django app with all the goodies you need to start developing, testing and publishing your app to PyPI
+and Github.
 
 
 ## Features
@@ -39,45 +40,27 @@ support with [mkdocstrings](https://mkdocstrings.github.io/).
 - [ ] [Versioned documentation](https://docs.readthedocs.io/en/stable/versions.html) and [pull request previews](https://docs.readthedocs.io/en/stable/pull-requests.html) with [Read the Docs](https://readthedocs.org/).
 - [ ] Containerization for development and deployment with [dev container](https://containers.dev/).
 - [ ] Follow the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
-- [ ] Github Actions Cached workflows
+- [  ] Turn Github repository in to a [Template Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
+that does all the setup so people don't need to install copier and run it locally. Similar to what Simon Willison did
+with [his cookicutter template](https://github.com/simonw/python-lib-template-repository)
 
 
 ## Usage
 
-Generating a new Django app is as simple as doing the following
+Generating a new Django app is as simple as running:
 
 ```bash
 pip install copier
 copier copy https://github.com/matagus/django-app-starter <app name>
 ```
 
-You will be prompted to enter some data needed to generate your app:
-
-![Copier copy prompt](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/prompt.png)
-
-Followed by this output:
-
-![Copier copy output](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/output.png)
-
-And at the end you'll get an app in a directory with the following structure:
-
-![App folder structure](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/structure.png)
-
-Now you're all set. See your new app's README for instructions on how to start developing, testing and finally build
-and publish your Django application.
+You will be prompted to enter some data needed to generate your app, and then you will have a new directory with your
+app ready to go.
 
 
 ## Contributing
 
 Contributions are welcome! ❤️
-
-
-## Roadmap
-
-- Turn Github repository in to a [Template Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
-that does all the setup so people don't need to install copier and run it locally. Similar to what Simon Willison did
-with [his cookicutter template](https://github.com/simonw/python-lib-template-repository)
-- Enhance generated README file to document all the possible commands and options.
 
 
 ## License

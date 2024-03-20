@@ -1,0 +1,26 @@
+site_name: {{ project_name }}
+site_url: https://github.com/matagus/{{ project_name }}
+repo_url: https://github.com/matagus/{{ project_name }}
+theme:
+  name: "material"
+  palette:
+    primary: green
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.path
+    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+    - tables
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

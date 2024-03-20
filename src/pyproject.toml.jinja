@@ -57,10 +57,26 @@ include = [
     "{{ module_name }}/",
 ]
 
+[project.optional-dependencies]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "pygments",
+    "pymdown-extensions",
+]
+
 [tool.hatch.envs.default]
 dependencies = [
     "Django>=4.0", "ipython", "ipdb", "mypy", "typing-extensions", "django-extensions", "Werkzeug"
 ]
+
+[tool.hatch.envs.docs]
+dependencies = ["mkdocs", "mkdocs-material", "pygments", "pymdown-extensions"]
+
+[tool.hatch.envs.docs.scripts]
+new = "mkdocs new ."
+build = "mkdocs build {args}"
+serve = "mkdocs serve {args}"
 
 [tool.hatch.envs.project]
 dependencies = [

@@ -32,17 +32,17 @@ pipelines for:
 config.
 - [x] Sync updates from newest versions of this template with [Copier](https://copier.readthedocs.io/en/stable/updating/).
 - [x] Standardised list of GitHub labels synchronised on push to main branch using [the labels CLI](https://github.com/hackebrot/labels).
+- [x] Documentation with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and docstring reference
+support with [mkdocstrings](https://mkdocstrings.github.io/).
+- [x] Latest stable documentation published to [GitHub](https://docs.github.com/en/pages)/[GitLab](https://docs.gitlab.com/ee/user/project/pages/) Pages.
 
 
 ## Coming Soon
 
-- [ ] Documentation with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and docstring reference
-support with [mkdocstrings](https://mkdocstrings.github.io/).
-- [ ] Latest stable documentation published to [GitHub](https://docs.github.com/en/pages)/[GitLab](https://docs.gitlab.com/ee/user/project/pages/) Pages.
 - [ ] [Versioned documentation](https://docs.readthedocs.io/en/stable/versions.html) and [pull request previews](https://docs.readthedocs.io/en/stable/pull-requests.html) with [Read the Docs](https://readthedocs.org/).
 - [ ] Containerization for development and deployment with [dev container](https://containers.dev/).
 - [ ] Follow the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
-- [  ] Turn Github repository in to a [Template Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
+- [ ] Turn Github repository in to a [Template Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
 that does all the setup so people don't need to install copier and run it locally. Similar to what Simon Willison did
 with [his cookicutter template](https://github.com/simonw/python-lib-template-repository)
 

@@ -1,5 +1,7 @@
 # django-app-starter
 
+![Demo.gif](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/demo.gif)
+
 ![Python Compatibility](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg) [![License](https://img.shields.io/badge/MIT-blue.svg)](https://opensource.org/licenses/MIT) [![We use Hatch](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Generate a new Django app with all the goodies you need to start developing, testing and publishing your app to PyPI

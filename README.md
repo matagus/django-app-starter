@@ -54,20 +54,8 @@ pip install copier
 copier copy https://github.com/matagus/django-app-starter <app name>
 ```
 
-You will be prompted to enter some data needed to generate your app:
-
-![Copier copy prompt](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/prompt.png)
-
-Followed by this output:
-
-![Copier copy output](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/output.png)
-
-And at the end you'll get an app in a directory with the following structure:
-
-![App folder structure](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/structure.png)
-
-Now you're all set. See your new app's README for instructions on how to start developing, testing and finally build
-and publish your Django application.
+You will be prompted to enter some data needed to generate your app, and then you will have a new directory with your
+app ready to go.
 
 
 ## Contributing

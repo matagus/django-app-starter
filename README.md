@@ -94,7 +94,7 @@ To run tests for a specific Python and Django version, for instance Python 3.12 
 hatch run test.py3.12-5.0:test
 ```
 
-Learn more about `hatch` and its commands in the [official documentation](https://hatch.pypa.io/latest/commands/) or
+Learn more about `hatch` and its commands in the [official documentation](https://hatch.pypa.io/latest/) or
 just ask for help in our [Discussion section](https://github.com/matagus/django-app-starter/discussions).
 
 ## Contributing

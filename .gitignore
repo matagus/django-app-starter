@@ -30,3 +30,7 @@ dmypy.json
 *.log
 # Environment variables
 .env
+# pyenv
+.python-version
+# AI Agents
+WARP.md

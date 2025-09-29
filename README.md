@@ -10,7 +10,7 @@ and Github.
 
 ## Features
 
-- [x] Compatibility with Python 3.9 to 3.12 and Django 4 to 5.0.3.
+- [x] Compatibility with Python 3.10 to 3.13 and Django 5.x.
 - [x] Package management and dynamic versioning using [Hatch](https://hatch.pypa.io/latest/install/).
 - [x] Testing with `hatch` for all possible combinations of Python and Django versions.
 - [x] Code coverage reporting to using [Coverage.py](https://coverage.readthedocs.io/en/latest/).

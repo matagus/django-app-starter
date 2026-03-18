@@ -76,7 +76,7 @@ hatch run project:createsuperuser
 hatch run project:runserver
 ```
 
-Also, you can run the tests (for all the Python + Django valid combinations) with:
+Also, you can run the tests (for all the Python + Django valid combinations: from 3.10 to 3.14 and 5.x to 6.x) with:
 
 ```
 hatch run test:test
@@ -88,10 +88,10 @@ And you can check the coverage with:
 hatch run test:cov
 ```
 
-To run tests for a specific Python and Django version, for instance Python 3.12 and Django 5.0, you can use:
+To run tests for a specific Python and Django version, for instance Python 3.14 and Django 6.0, you can use:
 
 ```
-hatch run test.py3.12-5.0:test
+hatch run test.py3.14-6.0:test
 ```
 
 Learn more about `hatch` and its commands in the [official documentation](https://hatch.pypa.io/latest/) or

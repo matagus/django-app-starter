@@ -1,0 +1,10 @@
+site_name: django-app-starter
+site_url: https://matagus.github.io/django-app-starter/
+repo_url: https://github.com/matagus/django-app-starter
+repo_name: matagus/django-app-starter
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md

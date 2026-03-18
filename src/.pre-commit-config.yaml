@@ -14,10 +14,10 @@ repos:
     hooks:
       - id: black
         args:
-          - "--target-version=py39"
           - "--target-version=py310"
           - "--target-version=py311"
           - "--target-version=py312"
+          - "--target-version=py313"
         types: [python]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -59,4 +59,4 @@ repos:
     rev: v3.20.0
     hooks:
     - id: pyupgrade
-      args: [--py312]
+      args: [--py313]

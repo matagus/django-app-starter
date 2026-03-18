@@ -2,6 +2,9 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.env]
+requires = ["hatch-uv"]
+
 [project]
 name = "{{ project_name }}"
 dynamic = ["version"]
@@ -67,11 +70,13 @@ docs = [
 ]
 
 [tool.hatch.envs.default]
+installer = "uv"
 dependencies = [
     "Django>=5.0", "ipython", "ipdb", "mypy", "typing-extensions", "django-extensions", "Werkzeug"
 ]
 
 [tool.hatch.envs.docs]
+installer = "uv"
 dependencies = ["mkdocs", "mkdocs-material", "pygments", "pymdown-extensions"]
 
 [tool.hatch.envs.docs.scripts]
@@ -80,6 +85,7 @@ build = "mkdocs build {args}"
 serve = "mkdocs serve {args}"
 
 [tool.hatch.envs.project]
+installer = "uv"
 dependencies = [
     "Django>=5.0", "ipython", "ipdb", "mypy", "typing-extensions", "django-extensions", "Werkzeug"
 ]
@@ -109,6 +115,7 @@ django = ["6.0"]
 python = ["3.12", "3.13", "3.14"]
 
 [tool.hatch.envs.test]
+installer = "uv"
 dependencies = ["coverage[toml]", "django~={matrix:django}.0", "pytest"]
 
 [tool.hatch.envs.test.scripts]

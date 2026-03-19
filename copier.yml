@@ -15,4 +15,11 @@ project_description:
 
 secret_key:
   type: str
-  help: Secret key for the example project
+  default: |-
+    {% set chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)' -%}
+    {% set key = namespace(value='') -%}
+    {% for _ in range(50) -%}
+    {% set key.value = key.value + (chars | random) -%}
+    {% endfor -%}
+    {{ key.value }}
+  when: false

@@ -2,7 +2,7 @@
 
 ![Demo.gif](https://raw.githubusercontent.com/matagus/django-app-starter/main/screenshots/demo.gif)
 
-![Python Compatibility](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg) ![Django Compatibility](https://img.shields.io/badge/django-5.x-green.svg) [![License](https://img.shields.io/badge/MIT-blue.svg)](https://opensource.org/licenses/MIT) [![We use Hatch](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![Python Compatibility](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg) ![Django Compatibility](https://img.shields.io/badge/django-5.x%20%7C%206.x-green.svg) [![License](https://img.shields.io/badge/MIT-blue.svg)](https://opensource.org/licenses/MIT) [![We use Hatch](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Generate a new Django app with all the goodies you need to start developing, testing and publishing your app to PyPI
 and Github.
@@ -10,7 +10,7 @@ and Github.
 
 ## Features
 
-- [x] Compatibility with Python 3.10 to 3.14 and Django 5.x.
+- [x] Compatibility with Python 3.10 to 3.14 and Django 5.x to 6.x.
 - [x] Package management and dynamic versioning using [Hatch](https://hatch.pypa.io/latest/install/).
 - [x] Testing with `hatch` for all possible combinations of Python and Django versions.
 - [x] Code coverage reporting to using [Coverage.py](https://coverage.readthedocs.io/en/latest/).
@@ -88,10 +88,10 @@ And you can check the coverage with:
 hatch run test:cov
 ```
 
-To run tests for a specific Python and Django version, for instance Python 3.12 and Django 5.0, you can use:
+To run tests for a specific Python and Django version, for instance Python 3.14 and Django 6.0, you can use:
 
 ```
-hatch run test.py3.12-5.0:test
+hatch run test.py3.14-6.0:test
 ```
 
 Learn more about `hatch` and its commands in the [official documentation](https://hatch.pypa.io/latest/) or

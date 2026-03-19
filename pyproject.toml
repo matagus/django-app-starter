@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "django-app-starter"
-version = "0.2.0"
+version = "0.5.1"
 description = "Copier template for Django reusable apps"
 
 [tool.pytest.ini_options]

@@ -1,0 +1,95 @@
+name: Initialize from Template
+on:
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Your Django App name'
+        required: true
+      module_name:
+        description: 'Your Python module name'
+        required: true
+      project_description:
+        description: 'Brief description of your app'
+        required: true
+
+jobs:
+  initialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if this is a template or initialized repo
+        id: check-template
+        run: |
+          if [ ! -f .is-template ]; then
+            echo "This repository is already initialized. Skipping template initialization."
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          echo "skip=false" >> $GITHUB_OUTPUT
+
+      - name: Set up Python
+        if: steps.check-template.outputs.skip == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        if: steps.check-template.outputs.skip == 'false'
+        run: |
+          pip install copier hatch
+
+      - name: Run copier to render template
+        if: steps.check-template.outputs.skip == 'false'
+        env:
+          PROJECT_NAME: ${{ github.event.inputs.project_name }}
+          MODULE_NAME: ${{ github.event.inputs.module_name }}
+          PROJECT_DESCRIPTION: ${{ github.event.inputs.project_description }}
+        run: |
+          # Create a temp directory for the rendered output
+          mkdir -p /tmp/rendered
+
+          # Run copier non-interactively
+          copier copy --force --trust \
+            --data project_name="$PROJECT_NAME" \
+            --data module_name="$MODULE_NAME" \
+            --data project_description="$PROJECT_DESCRIPTION" \
+            . /tmp/rendered
+
+      - name: Replace template with rendered content
+        if: steps.check-template.outputs.skip == 'false'
+        run: |
+          # Remove the template source directory
+          rm -rf src/
+
+          # Copy rendered files to root
+          cp -r /tmp/rendered/. .
+
+          # Remove the .is-template marker
+          rm -f .is-template
+
+          # Update README with correct repo URL
+          sed -i "s|https://github.com/matagus/{{ project_name }}|https://github.com/${{ github.repository }}|g" README.md || true
+          sed -i "s|matagus/{{ project_name }}|${{ github.repository }}|g" README.md || true
+
+      - name: Configure git
+        if: steps.check-template.outputs.skip == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push rendered content
+        if: steps.check-template.outputs.skip == 'false'
+        env:
+          PROJECT_NAME: ${{ github.event.inputs.project_name }}
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Initialize project: $PROJECT_NAME"
+          git push

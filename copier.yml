@@ -4,10 +4,12 @@ _subdirectory: src
 project_name:
     type: str
     help: What is your Django App name?
+    default: "{{ _copier_conf.dst_path | basename }}"
 
 module_name:
     type: str
     help: What is your Python module name?
+    default: "{{ project_name | lower | replace('-', '_') | replace(' ', '_') }}"
 
 project_description:
   type: str

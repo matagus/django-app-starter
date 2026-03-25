@@ -8,6 +8,7 @@ version = "0.5.1"
 description = "Copier template for Django reusable apps"
 
 [tool.pytest.ini_options]
+addopts = "-v --tb=short"
 testpaths = ["tests"]
 
 [tool.hatch.envs.test]

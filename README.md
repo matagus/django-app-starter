@@ -7,6 +7,8 @@
 Generate a new Django app with all the goodies you need to start developing, testing and publishing your app to PyPI
 and Github.
 
+:point_right: Try it as a github template repository: [matagus/django-app-template-repository](https://github.com/matagus/django-app-template-repository).
+
 
 ## Features
 

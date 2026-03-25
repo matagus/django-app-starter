@@ -44,9 +44,6 @@ support with [mkdocstrings](https://mkdocstrings.github.io/).
 - [ ] [Versioned documentation](https://docs.readthedocs.io/en/stable/versions.html) and [pull request previews](https://docs.readthedocs.io/en/stable/pull-requests.html) with [Read the Docs](https://readthedocs.org/).
 - [ ] Containerization for development and deployment with [dev container](https://containers.dev/).
 - [ ] Follow the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
-- [ ] Turn Github repository in to a [Template Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
-that does all the setup so people don't need to install copier and run it locally. Similar to what Simon Willison did
-with [his cookicutter template](https://github.com/simonw/python-lib-template-repository)
 
 
 ## Usage

@@ -1,11 +1,33 @@
-# Getting started with {{ project_name }}
+# {{ project_name }}
 
 {{ project_description }}
 
 ## Installation
 
-Install using pip:
+```bash
+pip install {{ project_name }}
+```
+
+Add `{{ module_name }}` to your `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    # ...
+    "{{ module_name }}",
+]
+```
+
+Then run migrations:
 
 ```bash
-pip install {{ module_name }}
+python manage.py migrate
 ```
+
+## Quick Start
+
+<!-- Add usage examples here -->
+
+## Documentation
+
+- [Development](development.md) — setting up a dev environment, running tests, code style
+- [Releasing](releasing.md) — how to cut a release and publish to PyPI

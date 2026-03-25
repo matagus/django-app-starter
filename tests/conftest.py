@@ -3,7 +3,6 @@ from pathlib import Path
 import copier
 import pytest
 
-
 TEMPLATE_ROOT = Path(__file__).parent.parent
 
 
@@ -17,6 +16,7 @@ def generated_app(tmp_path_factory):
             "project_name": "my-test-app",
             "module_name": "my_test_app",
             "project_description": "A test Django app",
+            "github_username": "test-user",
             "secret_key": "test-secret-key-12345678901234567890",
         },
         defaults=True,

@@ -5,6 +5,37 @@ repo_name: matagus/django-app-starter
 
 theme:
   name: material
+  palette:
+    primary: green
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
 
 nav:
   - Home: index.md
+  - Getting Started: getting-started.md
+  - Post-Generation Setup:
+    - Overview: setup/index.md
+    - GitHub Pages: setup/github-pages.md
+    - Codecov: setup/codecov.md
+    - PyPI Publishing: setup/pypi-publishing.md
+    - Labels: setup/labels.md
+  - GitHub Actions: workflows.md
+  - Release Process: release-process.md

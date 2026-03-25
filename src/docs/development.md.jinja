@@ -1,0 +1,100 @@
+# Development
+
+## Prerequisites
+
+Install [Hatch](https://hatch.pypa.io/latest/install/):
+
+```bash
+pip install hatch
+```
+
+## Setting Up
+
+Clone the repository:
+
+```bash
+git clone https://github.com/{{ github_username }}/{{ project_name }}.git
+cd {{ project_name }}
+```
+
+## Running the Example Project
+
+The repo includes an `example_project` so you can test `{{ module_name }}` immediately:
+
+```bash
+hatch run project:migrate
+hatch run project:createsuperuser
+hatch run project:runserver
+```
+
+Then open [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+## Running Tests
+
+Run tests across all supported Python + Django version combinations:
+
+```bash
+hatch run test:test
+```
+
+Run tests for a specific combination (e.g. Python 3.12 + Django 5.0):
+
+```bash
+hatch run test.py3.12-5.0:test
+```
+
+See all available environments:
+
+```bash
+hatch env show
+```
+
+## Coverage
+
+```bash
+hatch run test:cov
+```
+
+This prints a coverage summary and writes a JSON report used by the CI upload to Codecov.
+
+## Pre-commit Hooks
+
+Install the pre-commit hooks:
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+Hooks run automatically on commit. To run them manually against all files:
+
+```bash
+pre-commit run --all-files
+```
+
+## Code Style
+
+- **Black** — code formatting
+- **Ruff** — linting and import sorting
+- **codespell** — spell checking
+- **pyupgrade** — upgrades Python syntax to newer versions
+
+All of these run as pre-commit hooks. You can also run Ruff directly:
+
+```bash
+hatch run ruff check .
+hatch run ruff format .
+```
+
+## CI
+
+Every push and pull request to `main` runs the CI workflow, which tests against:
+
+- **Python**: 3.10, 3.11, 3.12, 3.13, 3.14
+- **Django**: 5.0, 5.1, 5.2, 6.0
+
+Coverage results are uploaded to Codecov automatically.
+
+## Contributing
+
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines on submitting issues and pull requests.

@@ -1,0 +1,51 @@
+# Releasing
+
+Releasing a new version of `{{ project_name }}` involves tagging a commit, reviewing a draft release, and publishing it — the PyPI upload happens automatically.
+
+## Prerequisites
+
+Before your first release, complete the [PyPI Publishing setup](https://matagus.github.io/django-app-starter/setup/pypi-publishing/).
+
+## Release Steps
+
+### 1. Make sure main is ready
+
+Ensure all changes are merged to `main` and the CI workflow is green.
+
+### 2. Tag the commit
+
+```bash
+git tag v0.1.0
+```
+
+Use [semantic versioning](https://semver.org/): `v<major>.<minor>.<patch>`.
+
+### 3. Push the tag
+
+```bash
+git push origin v0.1.0
+```
+
+### 4. Review the draft release
+
+The `release.yml` workflow creates a **draft release** automatically. Go to **Releases** in your GitHub repository, open the draft, review the auto-generated release notes, and make any edits.
+
+### 5. Publish the release
+
+Click **Publish release**.
+
+### 6. PyPI upload runs automatically
+
+Publishing triggers the `publish.yml` workflow, which builds the package with `hatch build` and uploads it to PyPI. Monitor progress in the **Actions** tab.
+
+Once complete, the new version is available at:
+
+```
+https://pypi.org/project/{{ project_name }}/
+```
+
+## Verifying
+
+```bash
+pip install {{ project_name }}==0.1.0
+```

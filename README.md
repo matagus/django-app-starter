@@ -51,51 +51,24 @@ with [his cookicutter template](https://github.com/simonw/python-lib-template-re
 
 ### Prerequisites
 
-You need to have `copier` and `hatch` installed in your system. If you don't have them, you can install them with:
+You need to have `copier` and `hatch` installed:
 
 ```
 pip install copier
 pip install hatch
 ```
 
-Then generating a new Django app is as simple as running:
+### Generate a new app
 
 ```
 copier copy https://github.com/matagus/django-app-starter <app-name>
 ```
 
-You will be prompted to enter some data needed to generate your app, and then you will have a new directory with your
-app ready to go.
+You'll be prompted for your project name, description, and GitHub username. A new directory is created with your app ready to develop.
 
-`django-app-starter` comes wwith an example project you can use to test your app. To run it just do:
+After generating, follow the **[Post-Generation Setup Guide](https://matagus.github.io/django-app-starter/setup/)** to activate GitHub Pages, Codecov, and PyPI publishing.
 
-```
-cd <app-name>
-hatch run project:migrate
-hatch run project:createsuperuser
-hatch run project:runserver
-```
-
-Also, you can run the tests (for all the Python + Django valid combinations: from 3.10 to 3.14 and 5.x to 6.x) with:
-
-```
-hatch run test:test
-```
-
-And you can check the coverage with:
-
-```
-hatch run test:cov
-```
-
-To run tests for a specific Python and Django version, for instance Python 3.14 and Django 6.0, you can use:
-
-```
-hatch run test.py3.14-6.0:test
-```
-
-Learn more about `hatch` and its commands in the [official documentation](https://hatch.pypa.io/latest/) or
-just ask for help in our [Discussion section](https://github.com/matagus/django-app-starter/discussions).
+See the **[full documentation](https://matagus.github.io/django-app-starter/)** for running tests, the example project, and the release process.
 
 ## Contributing
 

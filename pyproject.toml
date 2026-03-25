@@ -17,3 +17,11 @@ dependencies = ["copier", "pytest", "Django>=5.2", "tomli>=2.0"]
 
 [tool.hatch.envs.test.scripts]
 test = "pytest {args}"
+
+[tool.hatch.envs.docs]
+skip-install = true
+dependencies = ["mkdocs", "mkdocs-material", "pymdown-extensions"]
+
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build"
+serve = "mkdocs serve"

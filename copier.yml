@@ -15,6 +15,10 @@ project_description:
   type: str
   help: Please describe what your app does in a few words
 
+github_username:
+  type: str
+  help: What is your GitHub username or organization name?
+
 secret_key:
   type: str
   default: |-

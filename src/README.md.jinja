@@ -1,16 +1,14 @@
 # {{ project_name }}
 
-![Python Compatibility](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg) [![PyPi Version](https://img.shields.io/pypi/v/{{ project_name }}.svg)](https://pypi.python.org/pypi/{{ project_name }})  ![CI badge](https://github.com/matagus/{{ project_name }}/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/matagus/{{ project_name }}/graph/badge.svg?token=a64SxEDQk0)](https://codecov.io/gh/matagus/{{ project_name }}) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Python Compatibility](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg) [![PyPi Version](https://img.shields.io/pypi/v/{{ project_name }}.svg)](https://pypi.python.org/pypi/{{ project_name }})  ![CI badge](https://github.com/{{ github_username }}/{{ project_name }}/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/{{ github_username }}/{{ project_name }}/graph/badge.svg?token=a64SxEDQk0)](https://codecov.io/gh/{{ github_username }}/{{ project_name }}) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 {{ project_description }}
 
-Features
-========
+## Features
 
 - ...
 
-Installation
-============
+## Installation
 
 Via `pip` command:
 
@@ -21,12 +19,12 @@ pip install {{ project_name }}
 ...or you can clone the repo and install it using `pip` too:
 
 ```bash
-git clone git://github.com/matagus/{{ project_name }}.git
+git clone git://github.com/{{ github_username }}/{{ project_name }}.git
 cd {{ project_name }}
 pip install -e .
 ```
 
-then add `{{ module_name }}` to your `settings.py`:
+Then add `{{ module_name }}` to your `settings.py`:
 
 ```python
 INSTALLED_APPS = (
@@ -35,40 +33,54 @@ INSTALLED_APPS = (
 )
 ```
 
-then run the migrations:
+Then run the migrations:
 
 ```bash
 python manage.py migrate
 ```
 
-Usage
-=====
+## Usage
 
 
-Contributing
-============
+## Initial Setup
 
-Contributions are welcome! ❤️
+This project was generated using [django-app-starter](https://github.com/matagus/django-app-starter).
+A few one-time steps are needed to fully activate the included GitHub Actions workflows:
+
+- [ ] **GitHub Pages** — Enable GitHub Pages in repo Settings to publish your docs site
+- [ ] **Codecov** — Add a `CODECOV_TOKEN` secret to your repo for coverage reporting
+- [ ] **PyPI Publishing** — Create a `release` environment and add `PYPI_API_TOKEN` secret for automated PyPI uploads
+
+See the [Post-Generation Setup Guide](https://matagus.github.io/django-app-starter/setup/) for step-by-step instructions.
+
+## Releasing a New Version
+
+1. Tag a commit: `git tag v0.1.0`
+2. Push the tag: `git push origin v0.1.0`
+3. A draft release is automatically created in the **Releases** tab
+4. Edit the draft, review the release notes, and publish it
+5. Publishing triggers the workflow that uploads the package to PyPI
+
+See the [Release Process Guide](https://matagus.github.io/django-app-starter/release-process/) for full details.
+
+## Contributing
+
+Contributions are welcome!
 
 Please read [Contributing.md](CONTRIBUTING.md) for detailed instructions on how to help.
 
-Running Tests
--------------
+### Running Tests
 
 `hatch run test:test` will run the tests in every Python + Django versions combination.
 
-`hatch run test.py3.12-5.0:test will run them for python 3.12 and Django 5.0. Please see possible combinations using
-`hatch env show` ("test" matrix).
+`hatch run test.py3.12-5.0:test` will run them for Python 3.12 and Django 5.0. Please see possible combinations using `hatch env show` ("test" matrix).
 
-
-License
-=======
+## License
 
 `{{ project_name }}` is released under the MIT License - see the `LICENSE` file
 for more information.
 
 
-Acknowledgements
-================
+## Acknowledgements
 
-Develop & built using [![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+Developed & built using [![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)

@@ -10,6 +10,8 @@ on:
 jobs:
   labels:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/checkout@v6
       - name: Set up Python

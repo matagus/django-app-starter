@@ -38,17 +38,22 @@ GitHub also shows this URL in **Settings → Pages** once the first deployment s
 
 ## How the Workflow Works
 
-The `gh-pages.yml` workflow uses [`mhausenblas/mkdocs-deploy-gh-pages`](https://github.com/mhausenblas/mkdocs-deploy-gh-pages) to build and deploy:
+The `gh-pages.yml` workflow sets up Python, installs the docs dependencies from `pyproject.toml`, and deploys using MkDocs' built-in `gh-deploy` command:
 
 ```yaml
+- name: Set up Python
+  uses: actions/setup-python@v5
+  with:
+    python-version: "3.x"
+
+- name: Install docs dependencies
+  run: pip install ".[docs]"
+
 - name: Deploy docs
-  uses: mhausenblas/mkdocs-deploy-gh-pages@master
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    REQUIREMENTS: requirements.txt
+  run: mkdocs gh-deploy --force
 ```
 
-`GITHUB_TOKEN` is provided automatically — no secret setup needed. The workflow reads MkDocs dependencies from `requirements.txt` in the project root.
+No secret setup is needed — the `permissions: contents: write` block grants the workflow permission to push to the `gh-pages` branch. Dependencies come from the `[project.optional-dependencies] docs` section in `pyproject.toml`.
 
 ## Customising the Docs
 

@@ -32,5 +32,7 @@ dmypy.json
 .env
 # pyenv
 .python-version
+# documentation
+site/
 # AI Agents
 WARP.md
